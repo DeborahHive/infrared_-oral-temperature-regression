@@ -3,4 +3,6 @@ scikit-learn==1.6.1
 pandas
 numpy
 xgboost
+seaborn
+matplotlib
 joblib==1.5.1
