@@ -5,4 +5,4 @@ numpy
 xgboost
 seaborn
 matplotlib
-joblib==1.5.1
+joblib
