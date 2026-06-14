@@ -433,24 +433,15 @@ class App:
             layout=Config.LAYOUT
         )
 
-        # self.model = ModelLoader(
-        #     "fine_tuned_model.pkl"
-        # ).model
-
     def run(self):
         app = StreamlitApp()
         nav = SideBar(app.model)
-
-        # def predict_page():
-        #     nav.predict(self.model)
 
 
         home = st.Page(app.home_page, title="Home", icon=":material/home:", default=True)
         about = st.Page(nav.about_page, title="About", icon=":material/info:")
         methodology = st.Page(nav.method, title="Methodology", icon=":material/flowchart:")
         visualization = st.Page(nav.visualize, title="Visualization", icon=":material/bar_chart:")
-        # performance = st.Page(nav.performance_page, title="Model Performance", icon=":material/trending_up:")
-        # fingerprint = st.Page(nav.fingerprint_page, title="Chemical Fingerprint", icon=":material/labs:")
         predict = st.Page(nav.predict, title="Predict Toxicity", icon=":material/biotech:")
 
         pg = st.navigation([home, about, methodology, visualization, predict])
